@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MatchGame"
         mc:Ignorable="d"
         Title="Match these animals!!!" Height="450" Width="400">
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,21 +20,21 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" HorizontalAlignment="Center" Height="20" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Height="20" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="20" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Height="20" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Center" Height="20" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Height="20" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="20" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Height="20" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="0" HorizontalAlignment="Center" Height="20" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Height="20" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="20" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Height="20" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Center" Height="20" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Height="20" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Height="20" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Height="20" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" Width="40" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Center" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="0" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="1" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="2" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Grid.Row="3" Text="TextBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"/>
     </Grid>
 </Window>
