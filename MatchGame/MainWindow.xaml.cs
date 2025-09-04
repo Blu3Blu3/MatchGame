@@ -18,10 +18,28 @@ namespace MatchGame
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer = new DispatcherTimer();
+        int tenthsOfSecondsElapsed;
+        int matchesFound;
+
         public MainWindow()
         {
             InitializeComponent();
+            timer.Interval = TimeSpan.FromSeconds(.1);
+            timer.Tick += Timer_Tick;
             SetUpGame();
+        }
+        
+        // If you allow the IDE to automatically finish code by hitting "TAB", it may automatically create new methods like this, which is an event handler for the above timer, running every tick.
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            tenthsOfSecondsElapsed++;
+            timeTextBlock.Text = (tenthsOfSecondsElapsed / 10F).ToString("0.0s");
+            if (matchesFound == 8)
+            {
+                timer.Stop();
+                timeTextBlock.Text = timeTextBlock.Text + " - Play Again?";
+            }
         }
 
         private void SetUpGame()
@@ -42,11 +60,17 @@ namespace MatchGame
             Random rng = new Random();
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
+                if (textBlock == timeTextBlock) { continue; }
+                textBlock.Visibility = Visibility.Visible;
                 int index = rng.Next(animalEmoji.Count);
                 string nextEmoji = animalEmoji[index];
                 textBlock.Text = nextEmoji;
                 animalEmoji.RemoveAt(index);
             }
+
+            timer.Start();
+            tenthsOfSecondsElapsed = 0;
+            matchesFound = 0;
         }
 
         TextBlock lastTextBlockClicked;
@@ -64,6 +88,7 @@ namespace MatchGame
             }
             else if (textBlock.Text == lastTextBlockClicked.Text)
             {
+                matchesFound++;
                 textBlock.Visibility = Visibility.Hidden;
                 findingMatch = false;
             }
@@ -72,6 +97,11 @@ namespace MatchGame
                 lastTextBlockClicked.Visibility = Visibility.Visible;
                 findingMatch = false;
             }
+        }
+
+        private void TimeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (matchesFound == 8) {SetUpGame(); }
         }
     }
 }
